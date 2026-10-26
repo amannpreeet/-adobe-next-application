@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAKE. REMIX. REPEAT. | Adobe NEXT// Campus Leader application</title>
+<meta name="description" content="A proposal for a more creative campus. Make. Remix. Repeat.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Edit your name once: <body data-name="..."> */
+:root{--blue:#304FFE;--or:#F65B35;--lime:#D9FF55;--paper:#F5F0E6;--ink:#171717;--d:'Space Grotesk','Arial Black',Impact,sans-serif;--b:Inter,system-ui,Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 clamp(1rem,.95rem + .3vw,1.12rem)/1.6 var(--b);background:var(--paper);color:var(--ink);overflow-x:hidden}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,::before,::after{animation:none!important;transition:none!important}}
+h1,h2,h3{font-family:var(--d);line-height:.92;letter-spacing:-.03em;text-transform:uppercase}
+svg text{font-family:var(--d);font-weight:700}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+#s3 :focus-visible,#s4 :focus-visible{outline-color:var(--lime)}
+header{position:fixed;inset:0 0 auto;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.5rem clamp(.7rem,3vw,2rem)}
+nav ul{display:flex;gap:.15rem;list-style:none;padding:0}
+nav a{display:block;color:var(--ink);text-decoration:none;font:700 .8rem var(--d);padding:.35rem .5rem;border-radius:99px}
+nav a span,#cnt{display:none}
+nav a.on{background:var(--lime);box-shadow:inset 0 0 0 2px var(--ink)}
+.logo{font:700 .85rem var(--d);white-space:nowrap}
+#bar{position:absolute;left:0;bottom:-3px;height:3px;width:0;background:var(--or)}
+@media(min-width:900px){nav a span{display:inline}#cnt{display:inline;margin-left:.8rem;opacity:.6}}
+section{position:relative;padding:clamp(4.5rem,10vw,8rem) clamp(1rem,5vw,4rem);overflow:hidden}
+.in{max-width:1180px;margin:auto;position:relative;z-index:1}
+.lab{font:700 .78rem/1.2 var(--d);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem}
+h2{font-size:clamp(2.4rem,8vw,6.5rem);max-width:15ch;margin-bottom:1.5rem}
+h2.l{font-size:clamp(2.1rem,6.3vw,5rem);max-width:20ch}
+p+p{margin-top:1em}.cp{max-width:46ch}
+.two{display:grid;gap:3rem}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr;align-items:start}}
+.stamp{display:inline-block;transform:rotate(-3deg);background:var(--lime);color:var(--ink);border:2px solid var(--ink);padding:.3em .8em;font:700 .78rem var(--d);letter-spacing:.1em;text-transform:uppercase}
+.scr{display:block;width:240px;height:24px;color:var(--or)}
+.bst{position:absolute;width:min(48vw,520px);aspect-ratio:1;height:auto;animation:spin 50s linear infinite;z-index:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.js .rv.on{opacity:1;transform:none}
+/* 01 cover */
+#s1{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:7rem}
+#s1 .bst{right:-8%;top:10%}
+#s1 h1{font-size:clamp(3.4rem,17vw,15rem);line-height:.82;letter-spacing:-.05em;margin:2rem 0}
+#s1 h1 span{display:block;width:fit-content}
+#s1 .b{color:var(--blue);margin-left:.4em}
+#s1 .u{background:linear-gradient(transparent 62%,var(--lime) 62%)}
+.meta{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:end}
+.meta .big{font:700 clamp(1.2rem,2.4vw,1.8rem)/1.15 var(--d);max-width:22ch}
+.cue{color:var(--ink);font:700 .85rem var(--d);text-decoration:none}.cue i{display:inline-block;font-style:normal;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+/* 02 process */
+#s2{background:#EDE6D6}
+.card{border:3px solid var(--ink);background:#fff;box-shadow:8px 8px 0 var(--ink)}
+.stage{display:block;width:100%}
+.g{opacity:0;transition:opacity .4s}.g.on{opacity:1}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--ink)}
+.steps button{font:700 .72rem var(--d);padding:.9rem .2rem;background:var(--paper);color:var(--ink);border:0;border-right:2px solid var(--ink);cursor:pointer}
+.steps button:last-child{border:0}.steps [aria-pressed=true]{background:var(--lime)}
+#cap{padding:.8rem 1rem;border-top:3px solid var(--ink);font-size:.95rem;min-height:3.4rem}
+.note{font-size:.82rem;margin-top:1.4rem;opacity:.8;max-width:50ch}
+/* 03 vision */
+#s3{background:var(--blue);color:var(--paper)}
+#s3 .bst{right:-16%;top:34%;opacity:.35;--f:#304FFE;--c:#D9FF55;animation-direction:reverse}
+.sheet{background:var(--paper);color:var(--ink);padding:1.4rem 1.6rem;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--lime);transform:rotate(-1deg);margin:1.6rem 0 2rem}
+.sheet ul{padding-left:1.1rem}.sheet li{margin:.35rem 0}.tg{font:700 1.25rem/1.15 var(--d);margin-top:1rem;color:var(--blue)}
+.pw{position:relative;justify-self:center;width:min(100%,420px)}
+.poster{width:100%;display:block;transform:rotate(2deg);transition:transform .4s;box-shadow:10px 10px 0 var(--ink)}.poster:hover{transform:rotate(0)}
+.prompt{font:700 clamp(2rem,7vw,5.5rem)/.95 var(--d);letter-spacing:-.03em;text-transform:uppercase;margin:6rem 0 1rem}
+.prompt em{font-style:normal;color:var(--lime)}
+#s3 .scr{color:var(--lime);margin-bottom:2rem}
+.int{display:grid;gap:2rem}
+@media(min-width:800px){.int{grid-template-columns:1.3fr 1fr 1.1fr;align-items:start}.int figure:nth-child(2){margin-top:4rem}.int figure:nth-child(3){margin-top:1.5rem}}
+.int svg{width:100%;display:block;border:3px solid var(--ink);transition:transform .35s;transform:rotate(-1.5deg)}
+.int figure:nth-child(2) svg{transform:rotate(1.5deg)}.int svg:hover{transform:rotate(0) scale(1.03)}
+figcaption{font:700 .95rem var(--d);margin-top:.8rem}
+details{margin-top:.4rem;font-size:.92rem}summary{cursor:pointer;text-decoration:underline}
+.how{list-style:none;padding:0;margin-top:5rem;display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));counter-reset:h}
+.how li{border-top:3px solid var(--paper);padding-top:.8rem;font-size:.95rem}
+.how li::before{counter-increment:h;content:counter(h,decimal-leading-zero);display:block;font:700 2.6rem var(--d);color:var(--lime)}
+.how b{display:block;font:700 1.15rem var(--d);text-transform:uppercase}
+.seq{list-style:none;padding:0;display:grid;gap:3rem;margin-top:2rem}
+.seq li{display:grid;grid-template-columns:auto 1fr;gap:1rem 1.4rem;align-items:center;padding:1.4rem;border:3px solid var(--ink);position:relative;max-width:620px}
+.seq li:nth-child(1){background:var(--lime)}.seq li:nth-child(2){background:var(--or)}.seq li{color:var(--ink)}.seq li:nth-child(3){background:var(--paper)}
+.seq li+li::before{content:"\2193";position:absolute;top:-2.5rem;left:2rem;color:var(--lime);font:700 1.8rem var(--d)}
+.seq h3{font-size:clamp(1.3rem,3vw,1.9rem);margin-bottom:.4rem}.seq svg{width:min(150px,32vw);border:3px solid var(--ink);background:var(--paper)}
+.seq p{font-size:.95rem}
+@media(min-width:800px){.seq li:nth-child(2){margin-left:10%}.seq li:nth-child(3){margin-left:20%}}
+.sub3{margin-top:clamp(4.5rem,10vw,8rem);scroll-margin-top:4rem}
+.tag3{font:700 clamp(1.3rem,3vw,2.1rem)/1.1 var(--d);color:var(--lime);max-width:20ch;margin-top:1.2rem}
+.eye{width:100%;display:block}
+.cyc{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font:700 clamp(1.6rem,5.2vw,4rem)/1 var(--d);text-transform:uppercase;letter-spacing:-.03em;margin-bottom:1rem}
+.cyc span:nth-of-type(2){color:var(--lime)}.cyc i{font-style:normal;color:var(--or)}
+.seq a{color:inherit;font-weight:600}.seq p+p{margin-top:.5em;font-size:.88rem}
+.loopn{margin-top:2.5rem;border:3px dashed var(--paper);padding:1rem 1.2rem;max-width:620px}
+.cr{display:grid;gap:2.5rem;align-items:start}
+@media(min-width:900px){.cr{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.seq li{grid-template-columns:1fr}.seq svg{width:150px}}
+.cr .prompt{margin:1.5rem 0 .6rem}
+.cta{background:var(--lime);color:var(--ink);border:3px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:clamp(1.5rem,4vw,3rem);transform:rotate(-1.2deg);margin-top:clamp(4.5rem,10vw,8rem)}
+.cta h3{font-size:clamp(2.2rem,7vw,5.5rem);margin-bottom:1rem}.cta em{font-style:normal;color:var(--blue)}
+/* 04 AI */
+#s4{background:var(--ink);color:var(--paper)}
+#s4 h2 span{color:var(--lime)}
+.stg{display:grid;gap:1.5rem;margin-top:3.5rem}
+@media(min-width:900px){.stg{grid-template-columns:1fr 1.4fr 1.2fr}}
+.stg>div{border:2px solid var(--paper);padding:1.2rem}
+.stg h3{font-size:1.5rem;margin-bottom:.8rem}.stg h3 i{font-style:normal;color:var(--lime);margin-right:.4rem}
+.brief{font:700 1.5rem/1.05 var(--d);text-transform:uppercase;color:var(--lime)}
+#dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+#dirs button{aspect-ratio:1;border:2px dashed var(--paper);background-color:transparent;position:relative;cursor:pointer}
+#dirs [aria-pressed=true]{border:3px solid var(--lime)}
+#dirs span{position:absolute;left:0;bottom:0;background:var(--ink);color:var(--paper);font:700 .72rem var(--d);padding:.15rem .4rem}
+[data-d=A]{background-image:radial-gradient(circle,var(--or) 0 30%,transparent 31%)}
+[data-d=B]{background-image:repeating-linear-gradient(45deg,var(--blue) 0 6px,transparent 6px 12px)}
+[data-d=C]{background-image:conic-gradient(var(--lime) 0 25%,transparent 0 50%,var(--lime) 0 75%,transparent 0)}
+[data-d=D]{background-image:radial-gradient(var(--paper) 2px,transparent 3px);background-size:10px 10px}
+[data-d=E]{background-image:linear-gradient(90deg,var(--blue) 50%,var(--or) 50%)}
+[data-d=F]{background-image:linear-gradient(var(--paper) 1px,transparent 1px),linear-gradient(90deg,var(--paper) 1px,transparent 1px);background-size:12px 12px}
+.slot{border:2px dashed var(--lime);color:var(--lime);padding:.8rem;margin-top:1rem;font-size:.82rem}
+#pick{margin-top:.8rem;font-size:.9rem}
+#dec{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+#dec button{border:2px solid var(--paper);background:none;color:var(--paper);border-radius:99px;padding:.35em .9em;font:600 .85rem var(--b);cursor:pointer}
+#dec [aria-pressed=true]{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.pv{width:100%;max-width:280px;display:block;border:2px solid var(--paper)}
+.pv *{transition:all .5s ease}
+.pv .bg{fill:#cfcfcf}.pv .sh,.pv .sb{transform-box:fill-box;transform-origin:center}.pv .sh{fill:#9a9a9a}.pv .sb{fill:#b5b5b5}
+.pv .hd{font-size:20px;fill:#7a7a7a}.pv .sub{opacity:0;font-size:11px;fill:var(--ink)}.pv .acc{opacity:0;--f:#D9FF55}
+.pv.col .bg{fill:var(--paper)}.pv.col .sh{fill:var(--blue)}.pv.col .sb{fill:var(--or)}
+.pv.comp .sh{transform:translate(38px,-48px) scale(.8)}.pv.comp .sb{transform:translate(-22px,-8px) rotate(-6deg)}
+.pv.type .hd{font-size:32px;fill:var(--ink)}.pv.ill .acc{opacity:1}.pv.hier .sub{opacity:1}
+/* 05 why */
+#s5{background:var(--lime)}
+#s5 .bst{right:-10%;bottom:-6%;--f:#304FFE;--c:#F5F0E6;width:min(60vw,640px)}
+.end{font:700 clamp(3rem,13vw,11rem)/.85 var(--d);letter-spacing:-.05em;text-transform:uppercase;margin:4.5rem 0 2rem}
+.end span{display:block;width:fit-content}.end .b{color:var(--blue)}
+.sign{font:700 1.2rem var(--d)}
+footer{background:var(--ink);color:var(--paper);padding:1.5rem clamp(1rem,5vw,4rem);font-size:.85rem}
+</style>
+</head>
+<body data-name="Amanpreet Singh">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="burst" viewBox="0 0 200 200"><polygon fill="var(--f,#D9FF55)" stroke="#171717" stroke-width="3" stroke-linejoin="round" points="195,100 159.9,116 182.3,147.5 143.8,143.8 147.5,182.3 116,159.9 100,195 84,159.9 52.5,182.3 56.2,143.8 17.7,147.5 40.1,116 5,100 40.1,84 17.7,52.5 56.2,56.2 52.5,17.7 84,40.1 100,5 116,40.1 147.5,17.7 143.8,56.2 182.3,52.5 159.9,84"/><circle cx="100" cy="100" r="26" fill="var(--c,#F65B35)" stroke="#171717" stroke-width="3"/></symbol>
+<symbol id="scr" viewBox="0 0 240 24"><path d="M3 14C30 2 50 24 80 12S140 2 165 13s50 6 72-4" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<header><nav aria-label="Sections">
+<span class="logo">M.R.R.<span id="cnt" aria-hidden="true">01 / 05</span></span>
+<ul>
+<li><a class="on" href="#s1" aria-current="true">01<span> Cover</span></a></li>
+<li><a href="#s2">02<span> Perspective</span></a></li>
+<li><a href="#s3">03<span> Vision</span></a></li>
+<li><a href="#s4">04<span> AI</span></a></li>
+<li><a href="#s5">05<span> Why me</span></a></li>
+</ul></nav><div id="bar"></div></header>
+
+<main>
+<!-- 01 COVER -->
+<section id="s1" aria-labelledby="t1">
+<svg class="bst" aria-hidden="true"><use href="#burst" width="100%" height="100%"/></svg>
+<div class="in">
+<p class="lab">Adobe NEXT// Campus Leader application</p>
+<h1 id="t1"><span>Make.</span><span class="b">Remix.</span><span class="u">Repeat.</span></h1>
+<div class="meta">
+<div><p class="big">Creativity grows when we experiment, share, and try again.</p><p class="lab" style="margin:.8rem 0 0">My vision for a more creative campus.</p></div>
+<div><p class="lab" style="margin-bottom:.4rem">By <b class="me">Amanpreet Singh</b></p><a class="cue" href="#s2">Scroll <i>↓</i></a></div>
+</div></div></section>
+
+<!-- 02 PERSPECTIVE -->
+<section id="s2" aria-labelledby="t2"><div class="in two">
+<div class="rv"><p class="lab">02/05 · My creative perspective</p>
+<h2 id="t2">I’m here to experiment.</h2><svg class="scr" aria-hidden="true"><use href="#scr" width="100%" height="100%"/></svg>
+<div class="cp" style="margin-top:1.5rem"><p>I’m interested in how a simple idea can turn into something unexpected through graphic design, illustration, and experimentation.</p>
+<p>I’m still developing my style, and that’s part of what excites me. I like exploring different directions, testing ideas, and learning from the process instead of expecting the first attempt to be the final one.</p></div></div>
+<div class="rv"><div class="card">
+<svg class="stage" viewBox="0 0 400 280" role="img" aria-label="Four stages of a creative process, from a single idea to a refined outcome">
+<g class="g on" data-s="1"><circle cx="200" cy="130" r="26" fill="#D9FF55" stroke="#171717" stroke-width="3"/><path d="M200 82V62M238 96l14-12M162 96l-14-12" stroke="#171717" stroke-width="4" stroke-linecap="round"/><text x="200" y="240" text-anchor="middle" font-size="15">one rough thought</text></g>
+<g class="g" data-s="2"><g fill="none" stroke="#171717" stroke-width="2.5" stroke-dasharray="6 5"><rect x="22" y="50" width="110" height="130"/><rect x="145" y="50" width="110" height="130"/><rect x="268" y="50" width="110" height="130"/></g><circle cx="77" cy="115" r="30" fill="#F65B35"/><polygon points="200,80 235,155 165,155" fill="#304FFE"/><path d="M285 150c20-60 30 40 50-10s20-10 30-20" fill="none" stroke="#171717" stroke-width="5" stroke-linecap="round"/><text x="200" y="240" text-anchor="middle" font-size="15">many quick directions</text></g>
+<g class="g" data-s="3"><rect x="90" y="50" width="130" height="130" fill="#304FFE" transform="rotate(12 155 115)"/><circle cx="240" cy="120" r="62" fill="#F65B35" fill-opacity=".9"/><polygon points="150,200 215,90 285,200" fill="#D9FF55" stroke="#171717" stroke-width="3"/><path d="M110 70l70 70M180 70l-70 70" stroke="#171717" stroke-width="5" stroke-linecap="round"/><text x="200" y="250" text-anchor="middle" font-size="15">mix it, break it, cross things out</text></g>
+<g class="g" data-s="4"><g stroke="#171717" stroke-opacity=".2"><path d="M40 20v240M200 20v240M360 20v240M20 140h360"/></g><circle cx="130" cy="110" r="62" fill="#304FFE"/><rect x="190" y="90" width="150" height="70" fill="#D9FF55" stroke="#171717" stroke-width="3"/><circle cx="310" cy="60" r="18" fill="#F65B35"/><text x="40" y="225" font-size="44">REMIX.</text><text x="200" y="262" text-anchor="middle" font-size="12">one considered outcome</text></g>
+</svg>
+<div class="steps" id="steps">
+<button aria-pressed="true" data-s="1" data-c="A single, simple thought. Nothing is decided yet.">IDEA</button>
+<button aria-pressed="false" data-s="2" data-c="Many quick, rough directions side by side. Quantity over polish.">EXPLORE</button>
+<button aria-pressed="false" data-s="3" data-c="Mixing, breaking and combining. Some of it fails, and that is useful.">EXPERIMENT</button>
+<button aria-pressed="false" data-s="4" data-c="One direction, refined with deliberate choices.">REFINE</button></div>
+<p id="cap" aria-live="polite">A single, simple thought. Nothing is decided yet.</p></div>
+</div>
+</div></section>
+
+<!-- 03 VISION -->
+<section id="s3" aria-labelledby="t3">
+<svg class="bst" aria-hidden="true"><use href="#burst" width="100%" height="100%"/></svg>
+<div class="in">
+<div class="two rv" style="align-items:center">
+<div><p class="lab">03/05 · My vision</p><h2 class="l" id="t3">My creative community — Navarasa</h2>
+<p><span class="stamp">Proposed concept · not an existing organisation</span></p>
+<p class="tag3">“Different people. Different ways of seeing. One community.”</p></div>
+<svg class="eye" viewBox="0 0 400 270" role="img" aria-label="An eye built from four different graphic styles: halftone dots, stripes, type and scribbles, with a burst as the iris">
+<defs><clipPath id="ey"><path d="M10 130Q200-20 390 130Q200 280 10 130Z"/></clipPath>
+<pattern id="dt2" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="2.2" fill="#171717"/></pattern>
+<pattern id="st" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="12" fill="#171717"/></pattern></defs>
+<g clip-path="url(#ey)"><rect width="105" height="270" fill="#D9FF55"/><rect width="105" height="270" fill="url(#dt2)" opacity=".6"/>
+<rect x="105" width="95" height="270" fill="#F65B35"/><rect x="105" width="95" height="270" fill="url(#st)" opacity=".35"/>
+<rect x="200" width="95" height="270" fill="#F5F0E6"/><text x="204" y="112" font-size="64" fill="#171717">Aa</text><text x="214" y="190" font-size="34" fill="#304FFE">?!</text>
+<rect x="295" width="105" height="270" fill="#171717"/><path d="M305 80c20-30 40 30 60 0s20 20 30 5M305 175c25-25 45 25 70 0" fill="none" stroke="#D9FF55" stroke-width="5" stroke-linecap="round"/></g>
+<path d="M10 130Q200-20 390 130Q200 280 10 130Z" fill="none" stroke="#F5F0E6" stroke-width="5"/>
+<circle cx="200" cy="130" r="50" fill="#F5F0E6" stroke="#171717" stroke-width="4"/><use href="#burst" x="160" y="90" width="80" height="80"/>
+<g font-size="12" fill="#F5F0E6" text-anchor="middle"><text x="55" y="252">ILLUSTRATION</text><text x="150" y="262">ANIMATION</text><text x="250" y="262">FILM</text><text x="345" y="252">ZINES</text></g></svg></div>
+
+<div class="two sub3 rv"><div class="cp"><p class="lab">The idea</p>
+<p>I imagine Navarasa as a student-led creative community where different disciplines and perspectives come together.</p>
+<p>From illustration and animation to film and photography.</p>
+<p>Inspired by the idea of Navarasa in Indian aesthetics, it celebrates different ways of expression. It would be an experimental space where students can collaborate and learn.</p>
+<p><b>This is my vision for a community I’d like to help build as a Campus Leader.</b></p></div>
+<aside class="sheet"><p class="lab">The core of it</p><ul>
+<li>Open to students from every department.</li>
+<li>Collaborative projects over solo practice.</li>
+<li>Experimental, low-pressure and beginner-friendly.</li></ul></aside></div>
+
+<div class="sub3 rv"><p class="lab">How it could work</p>
+<p class="cyc"><span>Learn together</span><i>→</i><span>Create together</span><i>→</i><span>Share together</span><i>↻</i></p>
+<ol class="seq">
+<li><svg viewBox="0 0 160 110" role="img" aria-label="A dashed sketch circle turning into a solid digital shape with selection handles"><circle cx="38" cy="55" r="24" fill="none" stroke="#171717" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M70 55h22m-7-6l7 6-7 6" fill="none" stroke="#171717" stroke-width="3" stroke-linecap="round"/><circle cx="122" cy="55" r="24" fill="#304FFE"/><g fill="#F5F0E6" stroke="#171717" stroke-width="2"><rect x="94" y="27" width="7" height="7"/><rect x="143" y="27" width="7" height="7"/><rect x="94" y="76" width="7" height="7"/><rect x="143" y="76" width="7" height="7"/></g></svg>
+<div><h3>01 · Creative Workshops</h3><p><b>Learn together.</b> Beginner-friendly sessions where students explore graphic design, illustration, animation, and other digital creative tools.</p></div></li>
+<li><svg viewBox="0 0 160 110" role="img" aria-label="A clock with a prompt fanning out into a circle, a triangle and a square"><circle cx="38" cy="55" r="26" fill="#F5F0E6" stroke="#171717" stroke-width="3"/><path d="M38 38v17l11 6" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round"/><path d="M66 50L98 22M68 55h30M66 60L98 84" stroke="#171717" stroke-width="2.5" stroke-dasharray="4 4"/><circle cx="116" cy="20" r="12" fill="#F65B35" stroke="#171717" stroke-width="2.5"/><polygon points="104,58 128,58 116,38" fill="#D9FF55" stroke="#171717" stroke-width="2.5"/><rect x="102" y="70" width="30" height="30" fill="#304FFE" stroke="#171717" stroke-width="2.5"/></svg>
+<div><h3>02 · Open Creative Challenges</h3><p><b>Create together.</b> Short, approachable prompts that encourage students to make something without worrying about perfection.</p><p><a href="#crunch">See the Creative Crunch example ↓</a></p></div></li>
+<li><svg viewBox="0 0 160 110" role="img" aria-label="A wall of framed works of different sizes and colours"><g stroke="#171717" stroke-width="2.5"><rect x="12" y="12" width="50" height="64" fill="#F65B35"/><rect x="72" y="12" width="38" height="38" fill="#D9FF55"/><rect x="72" y="60" width="76" height="36" fill="#304FFE"/><rect x="120" y="12" width="28" height="38" fill="#171717"/><rect x="12" y="84" width="50" height="14" fill="#F5F0E6"/></g><circle cx="37" cy="44" r="14" fill="#F5F0E6"/><path d="M80 40l15-20 10 20z" fill="#171717"/></svg>
+<div><h3>03 · Student Showcase</h3><p><b>Share together.</b> A shared space, digital or physical, where students can present their work, discover other approaches, and exchange feedback.</p></div></li></ol>
+<p class="loopn">What students see in the showcase sparks the next workshop. A proposed cycle for how Navarasa could function.</p></div>
+
+<div class="sub3 rv" id="crunch"><p class="lab">A sample initiative Navarasa could organise</p>
+<div class="cr"><div>
+<h3 style="font-size:clamp(2.6rem,7.5vw,6rem)">Creative Crunch</h3>
+<p class="tag3" style="max-width:none;margin-bottom:1.2rem">One prompt. One day. Endless interpretations.</p>
+<span class="stamp">Proposed activity · conceptual example</span>
+<p class="prompt">Make the ordinary <em>unexpected.</em></p>
+<svg class="scr" aria-hidden="true"><use href="#scr" width="100%" height="100%"/></svg>
+<div class="cp" style="margin-top:1.5rem"><p>Students respond to the same creative prompt in their own way, using any medium they choose. The results can be shared in a collective showcase, creating an opportunity to discover different approaches, exchange ideas, and experiment without worrying about perfection.</p></div></div>
+<div class="pw"><svg class="poster" viewBox="0 0 360 480" role="img" aria-label="Concept poster for Creative Crunch, a proposed campaign. Make the ordinary unexpected. One prompt, one day, endless interpretations.">
+<rect width="360" height="480" fill="#F5F0E6" stroke="#171717" stroke-width="6"/><rect x="3" y="3" width="354" height="165" fill="#304FFE"/><polygon points="3,150 357,108 357,168 3,168" fill="#F65B35"/>
+<text x="18" y="62" font-size="46" fill="#D9FF55">CREATIVE</text><text x="18" y="108" font-size="46" fill="#F5F0E6">CRUNCH</text>
+<use href="#burst" x="232" y="14" width="112" height="112"/><text x="20" y="158" font-size="11" fill="#171717">PROMPT NO. 1 · A NAVARASA PROPOSAL</text>
+<circle cx="300" cy="215" r="34" fill="#F65B35"/><rect x="10" y="264" width="306" height="62" fill="#D9FF55"/>
+<text x="18" y="252" font-size="58" fill="#171717">MAKE THE</text><text x="18" y="314" font-size="58" fill="#171717">ORDINARY</text><path d="M10 291H316" stroke="#171717" stroke-width="3"/>
+<text x="18" y="376" font-size="44" fill="#304FFE" textLength="324">UNEXPECTED.</text><ellipse cx="180" cy="362" rx="172" ry="34" fill="none" stroke="#171717" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="196" y="418" font-size="12" fill="#171717" transform="rotate(-4 196 418)">↑ this is where it gets weird</text>
+<rect x="3" y="432" width="354" height="45" fill="#171717"/><text x="18" y="452" font-size="10.5" fill="#D9FF55">ONE PROMPT. ONE DAY. ENDLESS INTERPRETATIONS.</text><text x="18" y="468" font-size="9" fill="#F5F0E6">ANY MEDIUM · ANY SKILL LEVEL · NO PRESSURE</text></svg></div></div>
+<ol class="how">
+<li><b>Drop the prompt</b>One prompt is shared with everyone at the same moment.</li>
+<li><b>Start the clock</b>Limited Time. Any tool, any medium, any skill level.</li>
+<li><b>Make something</b>A poster, an illustration, a collage, or something nobody has thought of yet.</li>
+<li><b>Share it</b>Everything goes into one shared space. No ranking, just more people making.</li></ol></div>
+
+<div class="sub3 rv"><p class="lab">Three Conceptual Examples</p>
+<div class="int rv">
+<figure><svg viewBox="0 0 200 200" role="img" aria-label="Typographic interpretation: the word ORDINARY broken into offset coloured pieces"><rect width="200" height="200" fill="#F5F0E6"/><rect x="44" y="76" width="92" height="52" fill="#D9FF55"/><g font-size="62"><text x="8" y="70" fill="#171717">ORD</text><text x="50" y="122" fill="#304FFE" transform="rotate(-6 100 100)">IN</text><text x="20" y="176" fill="#F65B35">ARY</text></g><circle cx="168" cy="40" r="22" fill="#171717"/><text x="168" y="52" text-anchor="middle" font-size="34" fill="#D9FF55">!</text></svg>
+<figcaption>A. Typography breaks the rules</figcaption><details><summary>How I’d read it</summary>The word “ordinary” gets pulled apart until it stops being ordinary.</details></figure>
+<figure><svg viewBox="0 0 200 200" role="img" aria-label="Illustrated interpretation: a smiling mug with a tiny planet and star rising from it"><rect width="200" height="200" fill="#D9FF55"/><circle cx="100" cy="52" r="22" fill="#304FFE" stroke="#171717" stroke-width="4"/><ellipse cx="100" cy="52" rx="40" ry="8" fill="none" stroke="#171717" stroke-width="4" transform="rotate(-18 100 52)"/><polygon points="150,22 155,36 170,37 158,46 162,60 150,52 138,60 142,46 130,37 145,36" fill="#F65B35" stroke="#171717" stroke-width="3"/><path d="M55 96h90v40a45 45 0 0 1-90 0z" fill="#F5F0E6" stroke="#171717" stroke-width="4"/><path d="M145 106h14a14 14 0 0 1 0 30h-17" fill="none" stroke="#171717" stroke-width="4"/><circle cx="86" cy="130" r="4" fill="#171717"/><circle cx="114" cy="130" r="4" fill="#171717"/><path d="M90 146q10 10 20 0" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round"/></svg>
+<figcaption>B. Illustration tells a story</figcaption><details><summary>How I’d read it</summary>Coffee Mug with the energy of the universe.</details></figure>
+<figure><svg viewBox="0 0 200 200" role="img" aria-label="Abstract collage interpretation of layered circles, triangles and halftone dots"><defs><pattern id="dt" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.8" fill="#171717"/></pattern></defs><rect width="200" height="200" fill="#304FFE"/><circle cx="70" cy="85" r="48" fill="#F65B35"/><polygon points="95,38 176,52 166,150 100,172 86,120" fill="#F5F0E6"/><polygon points="95,38 176,52 166,150 100,172 86,120" fill="url(#dt)" opacity=".5"/><polygon points="20,186 100,100 180,186" fill="#D9FF55" stroke="#171717" stroke-width="3"/><circle cx="150" cy="40" r="14" fill="#171717"/></svg>
+<figcaption>C. Collage remixes the familiar</figcaption><details><summary>How I’d read it</summary>Familiar shapes get cut, layered and rearranged into something new.</details></figure>
+</div>
+
+</div>
+
+<div class="rv"><div class="cta"><h3>No experience required. <em>Just curiosity.</em></h3><p style="max-width:48ch">Open to beginners and experienced creators alike. Bring a skill you already have, try something unfamiliar, or collaborate with someone who sees things differently.</p></div></div>
+</div></section>
+
+<!-- 04 AI -->
+<section id="s4" aria-labelledby="t4"><div class="in">
+<div class="two rv"><div><p class="lab">04/05 · My perspective on AI</p><h2 class="l" id="t4">AI helps me explore. <span>I decide what works.</span></h2></div>
+<div class="cp"><p>I use AI as part of my creative process to brainstorm ideas, explore visual possibilities, and experiment with directions I might not have considered.</p>
+<p>But generating options is only the beginning. I still need to question the results, make choices, refine the design, and decide what communicates the idea best. For me, AI is most useful when it expands my thinking rather than replaces it.</p></div></div>
+<div class="stg rv">
+<div><h3><i>01</i>The idea</h3><p>Start with the brief:</p><p class="brief">Create a visual response to “Make the ordinary unexpected.”</p></div>
+<div><h3><i>02</i>The exploration</h3><div id="dirs">
+<button data-d="A" aria-pressed="false" aria-label="Direction A, placeholder"><span>A</span></button><button data-d="B" aria-pressed="false" aria-label="Direction B, placeholder"><span>B</span></button><button data-d="C" aria-pressed="false" aria-label="Direction C, placeholder"><span>C</span></button>
+<button data-d="D" aria-pressed="false" aria-label="Direction D, placeholder"><span>D</span></button><button data-d="E" aria-pressed="false" aria-label="Direction E, placeholder"><span>E</span></button><button data-d="F" aria-pressed="false" aria-label="Direction F, placeholder"><span>F</span></button></div>
+<p id="pick" aria-live="polite">Pick a direction. This is the human part: I choose.</p></div>
+<div><h3><i>03</i>The creative decision</h3>
+<div id="dec" role="group" aria-label="Design decisions to switch on"><button aria-pressed="false" data-k="type">Typography</button><button aria-pressed="false" data-k="comp">Composition</button><button aria-pressed="false" data-k="col">Colour</button><button aria-pressed="false" data-k="ill">Illustration</button><button aria-pressed="false" data-k="hier">Hierarchy</button></div>
+<svg class="pv" viewBox="0 0 240 300" role="img" aria-label="Poster preview that changes as design decisions are switched on"><rect class="bg" width="240" height="300"/><circle class="sh" cx="120" cy="150" r="60"/><rect class="sb" x="60" y="190" width="120" height="30"/><text class="hd" x="14" y="60">ORDINARY?</text><text class="sub" x="14" y="285">make the ordinary unexpected</text><use class="acc" href="#burst" x="150" y="200" width="70" height="70"/></svg></div>
+</div>
+<p class="note" style="color:var(--paper)">*Conceptual demonstration</p>
+</div></section>
+
+<!-- 05 WHY ME -->
+<section id="s5" aria-labelledby="t5">
+<svg class="bst" aria-hidden="true"><use href="#burst" width="100%" height="100%"/></svg>
+<div class="in">
+<div class="rv"><p class="lab">05/05 · Why me?</p><h2 class="l" id="t5">I’m here to make things happen.</h2>
+<div class="cp"><p>I’m still growing as a designer, and I see that as a reason to keep exploring, asking questions, and learning from others.</p>
+<p>I’d bring curiosity, a willingness to experiment, and a genuine interest in helping more students engage with creativity. As an Adobe NEXT// Campus Leader, I’d want to turn that enthusiasm into opportunities for people to make, share, and discover what they’re capable of.</p></div></div>
+<p class="end rv"><span>Make something.</span><span class="b">Pass it on.</span></p>
+<p class="sign"><span class="me">Amanpreet Singh</span><br>Adobe NEXT// Campus Leader application</p>
+</div></section>
+</main>
+<footer>Everything here is a proposal or a conceptual demonstration, not a record of any past work of mine.</footer>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+document.documentElement.classList.add('js');
+$$('.me').forEach(e=>e.textContent=document.body.dataset.name);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(e=>io.observe(e));
+const links=$$('nav a[href^="#"]'),secs=$$('main section'),cnt=$('#cnt'),bar=$('#bar'),de=document.documentElement;
+const pad=n=>String(n).padStart(2,'0');
+function update(){
+ bar.style.width=de.scrollTop/(de.scrollHeight-de.clientHeight)*100+'%';
+ let i=0;secs.forEach((x,k)=>{if(x.getBoundingClientRect().top<=innerHeight*.4)i=k});
+ if(innerHeight+de.scrollTop>=de.scrollHeight-4)i=secs.length-1;
+ links.forEach((a,k)=>{a.classList.toggle('on',k===i);k===i?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')});
+ cnt.textContent=pad(i+1)+' / '+pad(secs.length)}
+addEventListener('scroll',update,{passive:true});addEventListener('resize',update);addEventListener('load',update);update();
+const press=(list,on)=>list.forEach(x=>x.setAttribute('aria-pressed',x===on));
+const steps=$$('#steps button');
+steps.forEach(b=>b.addEventListener('click',()=>{press(steps,b);$('#cap').textContent=b.dataset.c;$$('.stage .g').forEach(g=>g.classList.toggle('on',g.dataset.s===b.dataset.s))}));
+const dirs=$$('#dirs button');
+dirs.forEach(b=>b.addEventListener('click',()=>{press(dirs,b);$('#pick').textContent='Direction '+b.dataset.d+' picked. Now the real work starts: refine it.'}));
+$$('#dec button').forEach(b=>b.addEventListener('click',()=>{const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);$('.pv').classList.toggle(b.dataset.k,on)}));
+</script>
+</body>
+</html>
